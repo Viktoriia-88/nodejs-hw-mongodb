@@ -50,7 +50,7 @@ export const loginUser = async (payload) => {
     });
 };
 
-// refresh
+// Refresh
 const createSession = () => {
     const accessToken = randomBytes(30).toString('base64');
     const refreshToken = randomBytes(30).toString('base64');
@@ -106,7 +106,7 @@ export const sendResetToken = async (email) => {
         },
         getEnvVar('JWT_SECRET'),
         {
-            expiresIn: '15m',
+            expiresIn: '5m',
         },
     );
 
